@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AWS Well-Architected Visualizer</title>
+<meta name="description" content="Interactive, beginner-friendly guide to the six pillars of the AWS Well-Architected Framework.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#stage">Skip to content</a>
+<header class="top">
+  <button id="menuBtn" class="icon-btn" aria-label="Toggle module menu" aria-expanded="false">&#9776;</button>
+  <div class="brand"><span class="logo" aria-hidden="true">W-A</span><div><strong>Well-Architected Visualizer</strong><small>Six pillars, one workload</small></div></div>
+  <div class="tools">
+    <div class="seg" role="group" aria-label="Explanation level">
+      <button id="modeB" data-mode="beginner" class="on">Beginner</button>
+      <button id="modeT" data-mode="technical">Technical</button>
+    </div>
+    <button id="glossBtn" class="btn ghost">Glossary</button>
+  </div>
+</header>
+<div class="layout">
+  <nav id="nav" class="side" aria-label="Learning modules">
+    <div class="prog"><div class="bar"><i id="progBar"></i></div><span id="progTxt">0 of 9 visited</span></div>
+    <ol id="navList"></ol>
+  </nav>
+  <main id="stage" tabindex="-1"></main>
+</div>
+<dialog id="gloss">
+  <div class="dlg-head"><h2>Glossary</h2><button class="icon-btn" id="glossClose" aria-label="Close glossary">&times;</button></div>
+  <input id="glossSearch" type="search" placeholder="Search terms (e.g. RTO, IAM, Multi-AZ)" aria-label="Search glossary">
+  <dl id="glossList"></dl>
+</dialog>
+<div id="tip" role="tooltip" hidden></div>
+<script src="script.js"></script>
+</body>
+</html>
